@@ -14,6 +14,7 @@ import {
   View,
   Text,
   StatusBar,
+  Button,
 } from 'react-native';
 
 import {
@@ -24,30 +25,20 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-const App: () => React$Node = () => {
-  return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Header />
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>Code Nourish.</Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step Two</Text>
-              <Text style={styles.sectionDescription}>Profit</Text>
-            </View>
-          </View>
-        </ScrollView>
-      </SafeAreaView>
-    </>
-  );
-};
+import ProductScreen from './screens/ProductScreen';
+import RecipeScreen from './screens/RecipeScreen';
+import HomeScreen from './screens/HomeScreen';
+
+import {createAppContainer} from 'react-navigation';
+import {createStackNavigator} from 'react-navigation-stack';
+
+const MainNavigator = createStackNavigator({
+  Home: {screen: HomeScreen},
+  Product: {screen: ProductScreen},
+  Recipe: {screen: RecipeScreen},
+});
+
+const App = createAppContainer(MainNavigator);
 
 const styles = StyleSheet.create({
   scrollView: {
