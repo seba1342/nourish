@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Button} from 'react-native';
+import {StyleSheet, View, Text} from 'react-native';
 
 class RecipeScreen extends React.Component {
   static navigationOptions = {
@@ -8,11 +8,19 @@ class RecipeScreen extends React.Component {
   render() {
     const {navigate} = this.props.navigation;
     return (
-      <View>
+      <View style={styles.container}>
         <Text>Recipes</Text>
       </View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});
 
 export default RecipeScreen;

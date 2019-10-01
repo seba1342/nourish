@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Button} from 'react-native';
+import {StyleSheet, View, Text} from 'react-native';
 
 class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -8,18 +8,19 @@ class HomeScreen extends React.Component {
   render() {
     const {navigate} = this.props.navigation;
     return (
-      <View>
-        <Button
-          title="Go to product"
-          onPress={() => navigate('Product', {name: 'Tuna'})}
-        />
-        <Button
-          title="Go to recipes"
-          onPress={() => navigate('Recipe', {name: 'Tuna'})}
-        />
+      <View style={styles.container}>
+        <Text>Home Screen</Text>
       </View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});
 
 export default HomeScreen;
