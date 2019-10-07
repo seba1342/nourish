@@ -1,15 +1,24 @@
-import React from 'react';
-import {StyleSheet, View, Text} from 'react-native';
+import React, {Component} from 'react';
+import {Text, View, StyleSheet, Alert} from 'react-native';
+import Camera from 'react-native-camera';
 
-class HomeScreen extends React.Component {
-  static navigationOptions = {
-    title: 'Home',
+export default class HomeScreen extends Component {
+  onBarCodeRead = response => {
+    Alert.alert(
+      'Barcode value is' + response.data,
+      'Barcode type is' + response.type,
+    );
   };
   render() {
-    const {navigate} = this.props.navigation;
     return (
       <View style={styles.container}>
-        <Text>Home Screen</Text>
+        <Camera
+          style={styles.preview}
+          onBarCodeRead={this.onBarCodeRead}
+          ref={cam => (this.camera = cam)}
+          aspect={Camera.constants.Aspect.fill}>
+          <Text style={{backgroundColor: 'white'}}>BARCODE SCANNER</Text>
+        </Camera>
       </View>
     );
   }
@@ -18,9 +27,23 @@ class HomeScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
+    flexDirection: 'row',
+  },
+  preview: {
+    flex: 1,
+    justifyContent: 'flex-end',
     alignItems: 'center',
   },
+  cameraIcon: {
+    margin: 5,
+    height: 40,
+    width: 40,
+  },
+  bottomOverlay: {
+    position: 'absolute',
+    width: '100%',
+    flex: 20,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
 });
-
-export default HomeScreen;
