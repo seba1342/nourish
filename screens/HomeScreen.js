@@ -1,24 +1,46 @@
 import React, {Component} from 'react';
 import {Text, View, StyleSheet, Alert} from 'react-native';
-import Camera from 'react-native-camera';
+import {RNCamera} from 'react-native-camera';
+import {NavigationEvents} from 'react-navigation';
+
+import ProductScreen from './ProductScreen';
 
 export default class HomeScreen extends Component {
-  onBarCodeRead = response => {
-    Alert.alert(
-      'Barcode value is' + response.data,
-      'Barcode type is' + response.type,
-    );
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isFocused: true,
+    };
+  }
+
   render() {
+    const {loaded} = this.state;
     return (
       <View style={styles.container}>
-        <Camera
-          style={styles.preview}
-          onBarCodeRead={this.onBarCodeRead}
-          ref={cam => (this.camera = cam)}
-          aspect={Camera.constants.Aspect.fill}>
-          <Text style={{backgroundColor: 'white'}}>BARCODE SCANNER</Text>
-        </Camera>
+        <NavigationEvents
+          onWillFocus={() => this.setState({loaded: true})}
+          onDidBlur={() => this.setState({loaded: false})}
+        />
+        {loaded && (
+          <RNCamera
+            ref={ref => {
+              this.camera = ref;
+            }}
+            style={styles.preview}
+            type={RNCamera.Constants.Type.back}
+            flashMode={RNCamera.Constants.FlashMode.on}
+            androidCameraPermissionOptions={{
+              title: 'Permission to use camera',
+              message: 'We need your permission to use your camera',
+              buttonPositive: 'Ok',
+              buttonNegative: 'Cancel',
+            }}
+            onGoogleVisionBarcodesDetected={({barcodes}) => {
+              this.props.navigation.navigate('Product');
+            }}
+          />
+        )}
       </View>
     );
   }

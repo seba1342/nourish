@@ -22,7 +22,7 @@ export const TabNavigator = createMaterialBottomTabNavigator(
         ),
       },
     },
-    Profile: {
+    Product: {
       screen: ProductScreen,
       navigationOptions: {
         tabBarLabel: 'Product',
@@ -40,7 +40,7 @@ export const TabNavigator = createMaterialBottomTabNavigator(
         barStyle: {backgroundColor: Colors.primary},
       },
     },
-    Image: {
+    Recipe: {
       screen: RecipeScreen,
       navigationOptions: {
         tabBarLabel: 'Recipe',
