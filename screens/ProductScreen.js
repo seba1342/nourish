@@ -9,7 +9,11 @@ import {
   Text,
 } from 'react-native';
 
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+// import {Colors} from 'react-native/Libraries/NewAppScreen';
+import {Colors} from '../assets/constants.js';
+
+import ProductDescription from '../components/Product/ProductDescription.js';
+import ProductRating from '../components/Product/ProductRating';
 
 class ProductScreen extends React.Component {
   static navigationOptions = {
@@ -21,54 +25,14 @@ class ProductScreen extends React.Component {
       <>
         <StatusBar barStyle="dark-content" />
         <SafeAreaView>
-          <ScrollView>
+          <ScrollView style={styles.scrollView}>
             <View>
-              <Image
-                style={styles.productImage}
-                source={require('../assets/images/image.jpg')}
+              <ProductDescription
+                productImage={require('../assets/images/lavazza-coffee-pods.jpg')}
+                productTitle="Lavazza Coffee Pods"
+                productDescription="Sexy coffee pods"
               />
-            </View>
-            <View style={styles.body}>
-              <View style={styles.sectionContainer}>
-                <Text style={styles.sectionTitle}>Step One</Text>
-                <Text style={styles.sectionDescription}>Code Nourish.</Text>
-              </View>
-              <View style={styles.sectionContainer}>
-                <Text style={styles.sectionTitle}>Step Two</Text>
-                <Text style={styles.sectionDescription}>Profit</Text>
-              </View>
-              <View style={styles.sectionContainer}>
-                <Text style={styles.sectionTitle}>Step One</Text>
-                <Text style={styles.sectionDescription}>Code Nourish.</Text>
-              </View>
-              <View style={styles.sectionContainer}>
-                <Text style={styles.sectionTitle}>Step Two</Text>
-                <Text style={styles.sectionDescription}>Profit</Text>
-              </View>
-              <View style={styles.sectionContainer}>
-                <Text style={styles.sectionTitle}>Step One</Text>
-                <Text style={styles.sectionDescription}>Code Nourish.</Text>
-              </View>
-              <View style={styles.sectionContainer}>
-                <Text style={styles.sectionTitle}>Step Two</Text>
-                <Text style={styles.sectionDescription}>Profit</Text>
-              </View>
-              <View style={styles.sectionContainer}>
-                <Text style={styles.sectionTitle}>Step One</Text>
-                <Text style={styles.sectionDescription}>Code Nourish.</Text>
-              </View>
-              <View style={styles.sectionContainer}>
-                <Text style={styles.sectionTitle}>Step Two</Text>
-                <Text style={styles.sectionDescription}>Profit</Text>
-              </View>
-              <View style={styles.sectionContainer}>
-                <Text style={styles.sectionTitle}>Step One</Text>
-                <Text style={styles.sectionDescription}>Code Nourish.</Text>
-              </View>
-              <View style={styles.sectionContainer}>
-                <Text style={styles.sectionTitle}>Step Two</Text>
-                <Text style={styles.sectionDescription}>Profit</Text>
-              </View>
+              <ProductRating />
             </View>
           </ScrollView>
         </SafeAreaView>
@@ -79,27 +43,16 @@ class ProductScreen extends React.Component {
 
 const styles = StyleSheet.create({
   scrollView: {
-    backgroundColor: 'transparent',
-    marginTop: 200,
+    backgroundColor: '#FFF5ED',
   },
   engine: {
     position: 'absolute',
     right: 0,
   },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
   sectionTitle: {
     fontSize: 24,
     fontWeight: '600',
-    color: Colors.black,
-  },
-  productImage: {
-    width: '100%',
-    height: 200,
-    top: 0,
-    left: 0,
+    color: Colors.primary,
   },
   sectionDescription: {
     marginTop: 8,

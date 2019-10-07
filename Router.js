@@ -7,6 +7,8 @@ import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
 import RecipeScreen from './screens/RecipeScreen';
 
+import {Colors} from './assets/constants';
+
 export const TabNavigator = createMaterialBottomTabNavigator(
   {
     Home: {
@@ -33,9 +35,9 @@ export const TabNavigator = createMaterialBottomTabNavigator(
             />
           </View>
         ),
-        activeColor: '#f0edf6',
-        inactiveColor: '#226557',
-        barStyle: {backgroundColor: '#3BAD87'},
+        activeColor: Colors.secondary,
+        inactiveColor: Colors.accent,
+        barStyle: {backgroundColor: Colors.primary},
       },
     },
     Image: {
@@ -47,16 +49,16 @@ export const TabNavigator = createMaterialBottomTabNavigator(
             <Icon style={[{color: tintColor}]} size={25} name={'book'} />
           </View>
         ),
-        activeColor: '#f0edf6',
-        inactiveColor: '#226557',
-        barStyle: {backgroundColor: '#3BAD87'},
+        activeColor: Colors.secondary,
+        inactiveColor: Colors.accent,
+        barStyle: {backgroundColor: Colors.primary},
       },
     },
   },
   {
     initialRouteName: 'Home',
-    activeColor: '#f0edf6',
-    inactiveColor: '#226557',
-    barStyle: {backgroundColor: '#3BAD87'},
+    activeColor: Colors.secondary,
+    inactiveColor: Colors.accent,
+    barStyle: {backgroundColor: Colors.primary},
   },
 );
