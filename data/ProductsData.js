@@ -21,7 +21,8 @@ const ProductData = [
       {
         title: 'Animal Products',
         rating: 3,
-        ratingDescription: 'Livestock farming has a vast environmental footprint. It contributes to land and water degradation, biodiversity loss, acid rain, coral reef degeneration and deforestation. Nutella still uses diary products in its recipe.',
+        ratingDescription:
+          'Livestock farming has a vast environmental footprint. It contributes to land and water degradation, biodiversity loss, acid rain, coral reef degeneration and deforestation. Nutella still uses diary products in its recipe.',
         iconPath: 'paw',
       },
       {
@@ -50,7 +51,8 @@ const ProductData = [
       {
         title: 'Animal Products',
         rating: 1,
-        ratingDescription: 'Livestock farming has a vast environmental footprint. It contributes to land and water degradation, biodiversity loss, acid rain, coral reef degeneration and deforestation. Starting late 2019, Nuttvia will be 100% Vegan.',
+        ratingDescription:
+          'Livestock farming has a vast environmental footprint. It contributes to land and water degradation, biodiversity loss, acid rain, coral reef degeneration and deforestation. Starting late 2019, Nuttvia will be 100% Vegan.',
         iconPath: 'paw',
       },
       {
@@ -103,13 +105,15 @@ const ProductData = [
       {
         title: 'Catching Method',
         rating: 1,
-        ratingDescription: 'Pole and line fishing is much more selective, ensuring less bycatch. Using purse seine, A vertical net ‘curtain’ is used to surround the school of fish, the bottom of which is then drawn together to enclose the fish, rather like tightening the cords of a drawstring purse. Fish 4 Ever exclusivly uses tuna caught by Pole and Line, ensuring longevity of the species.',
+        ratingDescription:
+          'Pole and line fishing is much more selective, ensuring less bycatch. Using purse seine, A vertical net ‘curtain’ is used to surround the school of fish, the bottom of which is then drawn together to enclose the fish, rather like tightening the cords of a drawstring purse. Fish 4 Ever exclusivly uses tuna caught by Pole and Line, ensuring longevity of the species.',
         iconPath: 'servicestack',
       },
       {
         title: 'Tuna Type',
         rating: 1,
-        ratingDescription: 'Relatively small, and the most abundant and widely-fished of tuna species. Skipjack tuna caught by pole and line is the most sustainable tuna fish.',
+        ratingDescription:
+          'Relatively small, and the most abundant and widely-fished of tuna species. Skipjack tuna caught by pole and line is the most sustainable tuna fish.',
         iconPath: 'fish',
       },
       {
@@ -138,8 +142,9 @@ const ProductData = [
       {
         title: 'Fair Trade',
         rating: 1,
-        ratingDescription: 'Fair trade is about stable prices, decent working conditions and the empowerment of farmers and workers around the world.',
-        iconPath: 'handshake',
+        ratingDescription:
+          'Fair trade is about stable prices, decent working conditions and the empowerment of farmers and workers around the world.',
+        iconPath: 'people-carry',
       },
       {
         title: 'Australian Made',
@@ -165,8 +170,9 @@ const ProductData = [
       {
         title: 'Fair Trade',
         rating: 1,
-        ratingDescription: 'Fair trade is about stable prices, decent working conditions and the empowerment of farmers and workers around the world.',
-        iconPath: 'handshake',
+        ratingDescription:
+          'Fair trade is about stable prices, decent working conditions and the empowerment of farmers and workers around the world.',
+        iconPath: 'people-carry',
       },
       {
         title: 'Australian Made',
@@ -186,9 +192,10 @@ const ProductData = [
     imagePath: require('../assets/images/lor.jpg'),
     score: [
       {
-        title: 'Recyclable/Compostable',
+        title: 'Recyclable',
         rating: 1,
-        ratingDescription: 'Alot of aluminium is used in the creation of coffe pods, some companies use Terracycle or similar alternatives to provide recycling initiatives to customers. The aluminium is melted in order to make new recycled products. L\'Or Espresso uses Terracycle.',
+        ratingDescription:
+          "Alot of aluminium is used in the creation of coffe pods, some companies use Terracycle or similar alternatives to provide recycling initiatives to customers. The aluminium is melted in order to make new recycled products. L'Or Espresso uses Terracycle.",
         iconPath: 'recycle',
       },
       {
@@ -196,7 +203,7 @@ const ProductData = [
         rating: 1,
         ratingDescription:
           "Fair trade is about stable prices, decent working conditions and the empowerment of farmers and workers around the world. L'Or Espresso has projects across the world promoting fair trade.",
-        iconPath: 'handshake',
+        iconPath: 'people-carry',
       },
       {
         title: 'Organic',
@@ -215,7 +222,7 @@ const ProductData = [
     imagePath: require('../assets/images/lavazza-coffee-pods.jpg'),
     score: [
       {
-        title: 'Recyclable/Compostable',
+        title: 'Recyclable',
         rating: 3,
         ratingDescription:
           'Alot of aluminium is used in the creation of coffe pods, some companies use Terracycle or similar alternatives to provide recycling initiatives to customers. The aluminium is melted in order to make new recycled products. Lavazza has no program in place fro recycling..',
@@ -226,7 +233,7 @@ const ProductData = [
         rating: 1,
         ratingDescription:
           'Fair trade is about stable prices, decent working conditions and the empowerment of farmers and workers around the world. Lavazza has projects across the world promoting fair trade.',
-        iconPath: 'handshake',
+        iconPath: 'people-carry',
       },
       {
         title: 'Organic',

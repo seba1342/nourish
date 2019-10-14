@@ -7,10 +7,11 @@ import {
   View,
   TouchableHighlight,
 } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 import {Colors} from '../../assets/constants.js';
 
-var ratingColor = Colors.green;
+var ratingColor = '#123456';
 
 const ProductCards = product => {
   const [visible, setVisible] = useState(false);
@@ -40,23 +41,28 @@ const ProductCards = product => {
         }}>
         <View style={styles.productCardContainer}>
           {product.product.score.map((item, key) => {
-            switch (product.rating) {
-              default:
+            switch (item.rating) {
               case 1:
                 ratingColor = Colors.green;
                 break;
               case 2:
                 ratingColor = Colors.yellow;
                 break;
-              case 2:
+              default:
+              case 3:
                 ratingColor = Colors.red;
                 break;
             }
             return (
               <View style={styles.productCard}>
-                <Text>{item.title}</Text>
-                <Text>{item.rating}</Text>
-                {/* <Image source={prop.iconPath} /> */}
+                <Icon
+                  style={[{color: ratingColor}]}
+                  size={64}
+                  name={item.iconPath}
+                />
+                <Text style={{color: ratingColor, fontSize: 18}}>
+                  {item.title}
+                </Text>
               </View>
             );
           })}
@@ -75,6 +81,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
     width: '100%',
     backgroundColor: Colors.secondary,
+    marginTop: 24,
   },
   productCard: {
     width: '35%',
@@ -87,6 +94,8 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 10,
     elevation: 3,
-    color: ratingColor,
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+    textAlign: 'center',
   },
 });
