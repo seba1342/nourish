@@ -1,12 +1,10 @@
 import React from 'react';
 import {
-  Image,
   SafeAreaView,
   ScrollView,
   StatusBar,
   StyleSheet,
   View,
-  Text,
 } from 'react-native';
 
 // import {Colors} from 'react-native/Libraries/NewAppScreen';
