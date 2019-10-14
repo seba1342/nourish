@@ -3,15 +3,18 @@ import {StyleSheet, View, Text} from 'react-native';
 
 class RecipeScreen extends React.Component {
   static navigationOptions = {
-    title: 'Recipe',
+    title: 'Scanned',
   };
   render() {
     const {navigate} = this.props.navigation;
-
     return (
-      <View style={styles.container}>
-        <Text>Recipes</Text>
-      </View>
+      <SafeAreaView>
+        <ScrollView style={styles.scrollView}>
+          <View>
+            <Text>Scanned</Text>
+          </View>
+        </ScrollView>
+      </SafeAreaView>
     );
   }
 }
