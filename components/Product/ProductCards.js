@@ -158,8 +158,9 @@ const styles = StyleSheet.create({
   productCardContainer: {
     flexDirection: 'row',
     flexWrap: 'wrap',
+    alignSelf: 'center',
     justifyContent: 'space-evenly',
-    width: '100%',
+    width: '90%',
     backgroundColor: Colors.secondary,
     marginTop: 24,
   },
