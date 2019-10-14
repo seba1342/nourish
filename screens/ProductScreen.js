@@ -12,6 +12,7 @@ import {Colors} from '../assets/constants.js';
 
 import ProductDescription from '../components/Product/ProductDescription.js';
 import ProductRating from '../components/Product/ProductRating';
+import ProductCards from '../components/Product/ProductCards';
 
 class ProductScreen extends React.Component {
   static navigationOptions = {
@@ -20,7 +21,8 @@ class ProductScreen extends React.Component {
   render() {
     const {navigation} = this.props;
 
-    console.log(navigation.state.params);
+    const product = navigation.state.params;
+
     return (
       <>
         <StatusBar barStyle="dark-content" />
@@ -29,9 +31,10 @@ class ProductScreen extends React.Component {
             <View>
               <ProductDescription
                 productImage={require('../assets/images/lavazza-coffee-pods.jpg')}
-                productTitle="Lavazza Coffee Pods"
+                productTitle={product.itemName}
                 productDescription="Sexy coffee pods"
               />
+              <ProductCards product={product} />
               <ProductRating />
             </View>
           </ScrollView>
