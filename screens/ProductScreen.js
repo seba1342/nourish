@@ -21,7 +21,7 @@ class ProductScreen extends React.Component {
     const {navigation} = this.props;
     const product = this.props.navigation.state.params;
 
-    console.log(product);
+    console.log(product.imagePath);
 
     return (
       <>
@@ -30,7 +30,7 @@ class ProductScreen extends React.Component {
           <ScrollView style={styles.scrollView}>
             <View>
               <ProductDescription
-                productImage={require('../assets/images/lavazza-coffee-pods.jpg')}
+                productImage={product.imagePath}
                 productTitle={product.itemName}
               />
               <ProductCards product={navigation.state.params} />

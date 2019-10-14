@@ -10,13 +10,11 @@ import {
 
 import {Colors} from '../../assets/constants.js';
 
+var ratingColor = Colors.green;
+
 const ProductCards = product => {
   const [visible, setVisible] = useState(false);
 
-  console.log(product.product.score[0].title);
-  for (let p in product.product.score) {
-    console.log(p.title);
-  }
   return (
     <>
       <Modal
@@ -42,6 +40,18 @@ const ProductCards = product => {
         }}>
         <View style={styles.productCardContainer}>
           {product.product.score.map((item, key) => {
+            switch (product.rating) {
+              default:
+              case 1:
+                ratingColor = Colors.green;
+                break;
+              case 2:
+                ratingColor = Colors.yellow;
+                break;
+              case 2:
+                ratingColor = Colors.red;
+                break;
+            }
             return (
               <View style={styles.productCard}>
                 <Text>{item.title}</Text>
@@ -77,5 +87,6 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 10,
     elevation: 3,
+    color: ratingColor,
   },
 });

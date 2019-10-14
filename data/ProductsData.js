@@ -9,7 +9,7 @@ const ProductData = [
     id: '930069800216',
     itemName: 'Nutella',
     category: 'Spreads',
-    imagePath: '../assets/images/nutella.jpg',
+    imagePath: require('../assets/images/nutella.jpg'),
     score: [
       {
         title: 'Palm Oil',
@@ -38,7 +38,7 @@ const ProductData = [
     id: '9351008000006',
     itemName: 'Nuttvia',
     category: 'Spreads',
-    imagePath: '../assets/images/nuttvia.jpg',
+    imagePath: require('../assets/images/nuttvia.jpg'),
     score: [
       {
         title: 'Palm Oil',
@@ -68,7 +68,7 @@ const ProductData = [
     id: '00000000001',
     itemName: 'Sole Mare',
     category: 'Tuna',
-    imagePath: '../assets/images/solemare.jpg',
+    imagePath: require('../assets/images/solemare.png'),
     score: [
       {
         title: 'Catching Method',
@@ -98,7 +98,7 @@ const ProductData = [
     id: '00000000002',
     itemName: 'Fish 4 Ever',
     category: 'Tuna',
-    imagePath: '../assets/images/fish4ever.jpg',
+    imagePath: require('../assets/images/fish4ever.jpg'),
     score: [
       {
         title: 'Catching Method',
@@ -127,7 +127,7 @@ const ProductData = [
     id: '00000000003',
     itemName: 'Pureharvest Raw Organic Honey',
     category: 'Honey',
-    imagePath: '../assets/images/pureharvest.jpg',
+    imagePath: require('../assets/images/pureharvest.jpg'),
     score: [
       {
         title: 'Organic',
@@ -154,7 +154,7 @@ const ProductData = [
     id: '930067702286',
     itemName: 'Capilano Pure Honey',
     category: 'Honey',
-    imagePath: '../assets/images/capilano.jpg',
+    imagePath: require('../assets/images/capilano.jpg'),
     score: [
       {
         title: 'Organic',
@@ -183,7 +183,7 @@ const ProductData = [
     id: '8711000362747',
     itemName: "L'Or Espresso Pods",
     category: 'Coffee',
-    imagePath: '../assets/images/lor.jpg',
+    imagePath: require('../assets/images/lor.jpg'),
     score: [
       {
         title: 'Recyclable/Compostable',
@@ -212,7 +212,7 @@ const ProductData = [
     id: '8000070081000',
     itemName: 'Lavazza Pods',
     category: 'Coffee',
-    imagePath: '../assets/images/lavazza-coffee-pods.jpg',
+    imagePath: require('../assets/images/lavazza-coffee-pods.jpg'),
     score: [
       {
         title: 'Recyclable/Compostable',
