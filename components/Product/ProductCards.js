@@ -85,6 +85,11 @@ const ProductCards = product => {
               }}>
               <View style={styles.productCardInner}>
                 <Icon
+                  style={[styles.infoIcon, {color: item.ratingColor}]}
+                  size={18}
+                  name="info-circle"
+                />
+                <Icon
                   style={[{color: item.ratingColor}]}
                   size={64}
                   name={item.iconPath}
@@ -181,5 +186,13 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
     alignItems: 'center',
     textAlign: 'center',
+  },
+  infoIcon: {
+    position: 'absolute',
+    top: 0,
+    right: 0,
+    paddingRight: 10,
+    paddingTop: 10,
+    color: Colors.primary,
   },
 });
