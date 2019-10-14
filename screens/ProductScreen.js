@@ -46,7 +46,7 @@ class ProductScreen extends React.Component {
 
 const styles = StyleSheet.create({
   scrollView: {
-    backgroundColor: '#FFF5ED',
+    backgroundColor: Colors.secondary,
   },
   engine: {
     position: 'absolute',
