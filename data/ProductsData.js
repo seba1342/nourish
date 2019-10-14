@@ -20,7 +20,7 @@ const ProductData = [
       {
         title: 'Animal Products',
         rating: 3,
-        ratingDescription: '',
+        ratingDescription: 'Livestock farming has a vast environmental footprint. It contributes to land and water degradation, biodiversity loss, acid rain, coral reef degeneration and deforestation. Nutella still uses diary products in its recipe.',
         iconPath: '',
       },
       {
@@ -48,7 +48,7 @@ const ProductData = [
       {
         title: 'Animal Products',
         rating: 1,
-        ratingDescription: '',
+        ratingDescription: 'Livestock farming has a vast environmental footprint. It contributes to land and water degradation, biodiversity loss, acid rain, coral reef degeneration and deforestation. Starting late 2019, Nuttvia will be 100% Vegan.',
         iconPath: '',
       },
       {
@@ -131,7 +131,7 @@ const ProductData = [
       {
         title: 'Fair Trade',
         rating: 1,
-        ratingDescription: '',
+        ratingDescription: 'Fair trade is about stable prices, decent working conditions and the empowerment of farmers and workers around the world.',
         iconPath: '',
       },
       {
@@ -157,7 +157,7 @@ const ProductData = [
       {
         title: 'Fair Trade',
         rating: 1,
-        ratingDescription: '',
+        ratingDescription: 'Fair trade is about stable prices, decent working conditions and the empowerment of farmers and workers around the world.',
         iconPath: '',
       },
       {
@@ -179,13 +179,13 @@ const ProductData = [
       {
         title: 'Recyclable/Compostable',
         rating: 1,
-        ratingDescription: '',
+        ratingDescription: 'Alot of aluminium is used in the creation of coffe pods, some companies use Terracycle or similar alternatives to provide recycling initiatives to customers. The aluminium is melted in order to make new recycled products. L\'Or Espresso uses Terracycle.',
         iconPath: '',
       },
       {
         title: 'Fair Trade',
         rating: 1,
-        ratingDescription: '',
+        ratingDescription: 'Fair trade is about stable prices, decent working conditions and the empowerment of farmers and workers around the world. L\'Or Espresso has projects across the world promoting fair trade.',
         iconPath: '',
       },
       {
@@ -206,13 +206,13 @@ const ProductData = [
       {
         title: 'Recyclable/Compostable',
         rating: 3,
-        ratingDescription: '',
+        ratingDescription: 'Alot of aluminium is used in the creation of coffe pods, some companies use Terracycle or similar alternatives to provide recycling initiatives to customers. The aluminium is melted in order to make new recycled products. Lavazza has no program in place fro recycling..',
         iconPath: '',
       },
       {
         title: 'Fair Trade',
         rating: 1,
-        ratingDescription: '',
+        ratingDescription: 'Fair trade is about stable prices, decent working conditions and the empowerment of farmers and workers around the world. Lavazza has projects across the world promoting fair trade.',
         iconPath: '',
       },
       {
