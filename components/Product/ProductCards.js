@@ -21,7 +21,7 @@ const ProductCards = product => {
   return (
     <>
       <Modal
-        animationType="slide"
+        animationType="fade"
         transparent={true}
         visible={visible}
         onPress={() => {
@@ -29,16 +29,31 @@ const ProductCards = product => {
         }}>
         <View style={styles.productModal}>
           <View style={styles.productModalInner}>
-            <Text style={styles.modalTitle}>{score.title}</Text>
-            <Text style={styles.modalCopy}>{score.ratingDescription}</Text>
-            <TouchableHighlight style={styles.closeModal}>
+            <View style={styles.modalTitleContainer}>
+              <Icon
+                style={[{color: score.ratingColor}]}
+                size={64}
+                name={score.iconPath}
+              />
+              <Text style={[styles.modalTitle, {color: score.ratingColor}]}>
+                {score.title}
+              </Text>
+            </View>
+            <Text style={[styles.modalCopy, {color: score.ratingColor}]}>
+              {score.ratingDescription}
+            </Text>
+            <TouchableHighlight>
               <View>
                 <Button
                   onPress={() => {
                     setVisible(!visible);
                   }}
                   style={[styles.closeModal, styles.buttonSecondary]}
-                  textStyle={{color: Colors.light, fontSize: 18}}>
+                  textStyle={{
+                    color: Colors.light,
+                    fontSize: 18,
+                    fontWeight: 'bold',
+                  }}>
                   Close
                 </Button>
               </View>
@@ -51,14 +66,14 @@ const ProductCards = product => {
         {product.product.score.map((item, key) => {
           switch (item.rating) {
             case 1:
-              ratingColor = Colors.green;
+              item.ratingColor = Colors.green;
               break;
             case 2:
-              ratingColor = Colors.yellow;
+              item.ratingColor = Colors.yellow;
               break;
             default:
             case 3:
-              ratingColor = Colors.red;
+              item.ratingColor = Colors.red;
               break;
           }
           return (
@@ -70,7 +85,7 @@ const ProductCards = product => {
               }}>
               <View style={styles.productCardInner}>
                 <Icon
-                  style={[{color: ratingColor}]}
+                  style={[{color: item.ratingColor}]}
                   size={64}
                   name={item.iconPath}
                 />
@@ -94,16 +109,24 @@ const styles = StyleSheet.create({
     color: Colors.light,
     borderRadius: 30,
     borderWidth: 0,
-    width: '50%',
+    fontWeight: 'bold',
+    width: '60%',
+    paddingVertical: 20,
     alignSelf: 'center',
     alignContent: 'center',
     alignItems: 'center',
     justifyContent: 'flex-end',
   },
   modalTitle: {
-    fontSize: 24,
+    fontSize: 28,
     fontWeight: 'bold',
     color: Colors.primary,
+    marginLeft: 15,
+    alignSelf: 'center',
+  },
+  modalTitleContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
   },
   modalCopy: {
     fontSize: 16,
@@ -120,11 +143,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#00000080',
   },
   productModalInner: {
-    width: '80%',
-    height: '80%',
+    width: '90%',
+    height: '50%',
     backgroundColor: '#FFFFFF',
-    borderRadius: 20,
-    justifyContent: 'center',
+    borderRadius: 40,
+    justifyContent: 'space-evenly',
     alignItems: 'center',
   },
   productCardContainer: {

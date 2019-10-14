@@ -144,7 +144,7 @@ const ProductData = [
         rating: 1,
         ratingDescription:
           'Fair trade is about stable prices, decent working conditions and the empowerment of farmers and workers around the world.',
-        iconPath: 'people-carry',
+        iconPath: 'globe',
       },
       {
         title: 'Australian Made',
@@ -172,7 +172,7 @@ const ProductData = [
         rating: 1,
         ratingDescription:
           'Fair trade is about stable prices, decent working conditions and the empowerment of farmers and workers around the world.',
-        iconPath: 'people-carry',
+        iconPath: 'globe',
       },
       {
         title: 'Australian Made',
@@ -195,7 +195,7 @@ const ProductData = [
         title: 'Recyclable',
         rating: 1,
         ratingDescription:
-          "Alot of aluminium is used in the creation of coffe pods, some companies use Terracycle or similar alternatives to provide recycling initiatives to customers. The aluminium is melted in order to make new recycled products. L'Or Espresso uses Terracycle.",
+          "A lot of aluminium is used in the creation of coffee pods, some companies use Terracycle or similar alternatives to provide recycling initiatives to customers. The aluminium is melted in order to make new recycled products. L'Or Espresso uses Terracycle.",
         iconPath: 'recycle',
       },
       {
@@ -203,13 +203,13 @@ const ProductData = [
         rating: 1,
         ratingDescription:
           "Fair trade is about stable prices, decent working conditions and the empowerment of farmers and workers around the world. L'Or Espresso has projects across the world promoting fair trade.",
-        iconPath: 'people-carry',
+        iconPath: 'globe',
       },
       {
         title: 'Organic',
         rating: 1,
         ratingDescription:
-          'UTZ is a certification program for sustainable farming of coffee, tea, cocoa and hazelnuts. The program is part of the Rainforest Alliance, an international non-profit organization working to create a better future for people and nature. This product is UTZ certified',
+          'UTZ is a certification program for sustainable farming of coffee, tea, cocoa and hazelnuts. The program is part of the Rainforest Alliance, an international non-profit organization working to create a better future for people and nature. This product is UTZ certified.',
         iconPath: 'leaf',
       },
     ],
@@ -225,7 +225,7 @@ const ProductData = [
         title: 'Recyclable',
         rating: 3,
         ratingDescription:
-          'Alot of aluminium is used in the creation of coffe pods, some companies use Terracycle or similar alternatives to provide recycling initiatives to customers. The aluminium is melted in order to make new recycled products. Lavazza has no program in place fro recycling..',
+          'A lot of aluminium is used in the creation of coffee pods, some companies use Terracycle or similar alternatives to provide recycling initiatives to customers. The aluminium is melted in order to make new recycled products. Lavazza has no program in place for recycling.',
         iconPath: 'recycle',
       },
       {
@@ -233,13 +233,13 @@ const ProductData = [
         rating: 1,
         ratingDescription:
           'Fair trade is about stable prices, decent working conditions and the empowerment of farmers and workers around the world. Lavazza has projects across the world promoting fair trade.',
-        iconPath: 'people-carry',
+        iconPath: 'globe',
       },
       {
         title: 'Organic',
         rating: 3,
         ratingDescription:
-          'UTZ is a certification program for sustainable farming of coffee, tea, cocoa and hazelnuts. The program is part of the Rainforest Alliance, an international non-profit organization working to create a better future for people and nature. This product is not UTZ certified',
+          'UTZ is a certification program for sustainable farming of coffee, tea, cocoa and hazelnuts. The program is part of the Rainforest Alliance, an international non-profit organization working to create a better future for people and nature. This product is not UTZ certified.',
         iconPath: 'leaf',
       },
     ],
