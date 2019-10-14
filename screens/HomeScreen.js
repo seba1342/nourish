@@ -59,7 +59,7 @@ export default class HomeScreen extends Component {
                 scannedProductBarcode: barcodes[0].data,
                 scannedProductData: {},
               });
-              this.getProductById(this.state.scannedProductBarcode);
+              this.getProductById(barcodes[0].data);
               this.RBSheet.open();
             }}
           />
