@@ -9,7 +9,7 @@ const ProductData = [
     id: '930069800216',
     itemName: 'Nutella',
     category: 'Spreads',
-    imagePath:'../assets/images/nutella.jpg',
+    imagePath: '../assets/images/nutella.jpg',
     score: [
       {
         title: 'Palm Oil',
@@ -38,7 +38,7 @@ const ProductData = [
     id: '9351008000006',
     itemName: 'Nuttvia',
     category: 'Spreads',
-    imagePath:'../assets/images/nuttvia.jpg',
+    imagePath: '../assets/images/nuttvia.jpg',
     score: [
       {
         title: 'Palm Oil',
@@ -68,24 +68,26 @@ const ProductData = [
     id: '00000000001',
     itemName: 'Sole Mare',
     category: 'Tuna',
-    imagePath:'../assets/images/solemare.jpg',
+    imagePath: '../assets/images/solemare.jpg',
     score: [
       {
         title: 'Catching Method',
         rating: 2,
-        ratingDescription: 'Pole and line fishing is much more selective, ensuring less bycatch. Using purse seine, A vertical net ‘curtain’ is used to surround the school of fish, the bottom of which is then drawn together to enclose the fish, rather like tightening the cords of a drawstring purse. Solemare uses Pole and Line, but also is unclear weather they use Purse seine.',
+        ratingDescription:
+          'Pole and line fishing is much more selective, ensuring less bycatch. Using purse seine, A vertical net ‘curtain’ is used to surround the school of fish, the bottom of which is then drawn together to enclose the fish, rather like tightening the cords of a drawstring purse. Solemare uses Pole and Line, but also is unclear weather they use Purse seine.',
         iconPath: 'servicestack',
       },
       {
         title: 'Tuna Type',
         rating: 3,
-        ratingDescription: 'There are real concerns that some populations of yellowfin have been totally overfished, and in many places are still plummeting. Yellow fish is unsustainable, try skipjack instead.',
+        ratingDescription:
+          'There are real concerns that some populations of yellowfin have been totally overfished, and in many places are still plummeting. Yellow fish is unsustainable, try skipjack instead.',
         iconPath: 'fish',
       },
       {
         title: 'MSC Certified',
         rating: 3,
-        ratingDescription: 
+        ratingDescription:
           'Wild, traceable, sustainable: the blue fish label is only applied to wild fish or seafood from fisheries that have been certified to the MSC Fisheries Standard, a science-based set of requirements for sustainable fishing. Solemare is not MSC Certified',
         iconPath: 'check',
       },
@@ -96,7 +98,7 @@ const ProductData = [
     id: '00000000002',
     itemName: 'Fish 4 Ever',
     category: 'Tuna',
-    imagePath:'../assets/images/fish4ever.jpg',
+    imagePath: '../assets/images/fish4ever.jpg',
     score: [
       {
         title: 'Catching Method',
@@ -113,7 +115,7 @@ const ProductData = [
       {
         title: 'MSC Certified',
         rating: 3,
-        ratingDescription: 
+        ratingDescription:
           'Wild, traceable, sustainable: the blue fish label is only applied to wild fish or seafood from fisheries that have been certified to the MSC Fisheries Standard, a science-based set of requirements for sustainable fishing. Fish4Ever is not MSC Certified',
         iconPath: 'check',
       },
@@ -125,7 +127,7 @@ const ProductData = [
     id: '00000000003',
     itemName: 'Pureharvest Raw Organic Honey',
     category: 'Honey',
-    imagePath:'../assets/images/pureharvest.jpg',
+    imagePath: '../assets/images/pureharvest.jpg',
     score: [
       {
         title: 'Organic',
@@ -152,7 +154,7 @@ const ProductData = [
     id: '930067702286',
     itemName: 'Capilano Pure Honey',
     category: 'Honey',
-    imagePath:'../assets/images/capilano.jpg',
+    imagePath: '../assets/images/capilano.jpg',
     score: [
       {
         title: 'Organic',
@@ -181,7 +183,7 @@ const ProductData = [
     id: '8711000362747',
     itemName: "L'Or Espresso Pods",
     category: 'Coffee',
-    imagePath:'../assets/images/lor.jpg',
+    imagePath: '../assets/images/lor.jpg',
     score: [
       {
         title: 'Recyclable/Compostable',
@@ -192,7 +194,8 @@ const ProductData = [
       {
         title: 'Fair Trade',
         rating: 1,
-        ratingDescription: 'Fair trade is about stable prices, decent working conditions and the empowerment of farmers and workers around the world. L\'Or Espresso has projects across the world promoting fair trade.',
+        ratingDescription:
+          "Fair trade is about stable prices, decent working conditions and the empowerment of farmers and workers around the world. L'Or Espresso has projects across the world promoting fair trade.",
         iconPath: 'handshake',
       },
       {
@@ -209,18 +212,20 @@ const ProductData = [
     id: '8000070081000',
     itemName: 'Lavazza Pods',
     category: 'Coffee',
-    imagePath:'../assets/images/lavazza-coffee-pods.jpg',
+    imagePath: '../assets/images/lavazza-coffee-pods.jpg',
     score: [
       {
         title: 'Recyclable/Compostable',
         rating: 3,
-        ratingDescription: 'Alot of aluminium is used in the creation of coffe pods, some companies use Terracycle or similar alternatives to provide recycling initiatives to customers. The aluminium is melted in order to make new recycled products. Lavazza has no program in place fro recycling..',
+        ratingDescription:
+          'Alot of aluminium is used in the creation of coffe pods, some companies use Terracycle or similar alternatives to provide recycling initiatives to customers. The aluminium is melted in order to make new recycled products. Lavazza has no program in place fro recycling..',
         iconPath: 'recycle',
       },
       {
         title: 'Fair Trade',
         rating: 1,
-        ratingDescription: 'Fair trade is about stable prices, decent working conditions and the empowerment of farmers and workers around the world. Lavazza has projects across the world promoting fair trade.',
+        ratingDescription:
+          'Fair trade is about stable prices, decent working conditions and the empowerment of farmers and workers around the world. Lavazza has projects across the world promoting fair trade.',
         iconPath: 'handshake',
       },
       {

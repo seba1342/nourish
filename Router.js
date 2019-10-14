@@ -14,10 +14,10 @@ export const TabNavigator = createMaterialBottomTabNavigator(
     Home: {
       screen: HomeScreen,
       navigationOptions: {
-        tabBarLabel: 'Home',
+        tabBarLabel: 'Scan',
         tabBarIcon: ({tintColor}) => (
           <View>
-            <Icon style={[{color: tintColor}]} size={25} name={'home'} />
+            <Icon style={[{color: tintColor}]} size={21} name={'barcode'} />
           </View>
         ),
       },
@@ -30,8 +30,8 @@ export const TabNavigator = createMaterialBottomTabNavigator(
           <View>
             <Icon
               style={[{color: tintColor}]}
-              size={25}
-              name={'shopping-bag'}
+              size={21}
+              name={'shopping-basket'}
             />
           </View>
         ),
@@ -43,10 +43,10 @@ export const TabNavigator = createMaterialBottomTabNavigator(
     Recipe: {
       screen: RecipeScreen,
       navigationOptions: {
-        tabBarLabel: 'Recipe',
+        tabBarLabel: 'Saved',
         tabBarIcon: ({tintColor}) => (
           <View>
-            <Icon style={[{color: tintColor}]} size={25} name={'book'} />
+            <Icon style={[{color: tintColor}]} size={21} name={'heart'} />
           </View>
         ),
         activeColor: Colors.secondary,

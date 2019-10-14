@@ -14,7 +14,6 @@ const ProductDescription = ({
       <Image style={styles.productImage} source={productImage} />
       <View style={styles.sectionContainer}>
         <Text style={styles.sectionTitle}>{productTitle}</Text>
-        <Text style={styles.sectionDescription}>{productDescription}</Text>
       </View>
     </View>
   );

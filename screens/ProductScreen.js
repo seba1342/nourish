@@ -11,7 +11,6 @@ import {
 import {Colors} from '../assets/constants.js';
 
 import ProductDescription from '../components/Product/ProductDescription.js';
-import ProductRating from '../components/Product/ProductRating';
 import ProductCards from '../components/Product/ProductCards';
 
 class ProductScreen extends React.Component {
@@ -20,8 +19,9 @@ class ProductScreen extends React.Component {
   };
   render() {
     const {navigation} = this.props;
+    const product = this.props.navigation.state.params;
 
-    const product = navigation.state.params;
+    console.log(product);
 
     return (
       <>
@@ -32,10 +32,8 @@ class ProductScreen extends React.Component {
               <ProductDescription
                 productImage={require('../assets/images/lavazza-coffee-pods.jpg')}
                 productTitle={product.itemName}
-                productDescription="Sexy coffee pods"
               />
-              <ProductCards product={product} />
-              <ProductRating />
+              <ProductCards product={navigation.state.params} />
             </View>
           </ScrollView>
         </SafeAreaView>
