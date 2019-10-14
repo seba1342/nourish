@@ -1,5 +1,13 @@
 import React from 'react';
-import {StyleSheet, View, Text} from 'react-native';
+import {
+  Image,
+  SafeAreaView,
+  ScrollView,
+  StatusBar,
+  StyleSheet,
+  View,
+  Text,
+} from 'react-native';
 
 class RecipeScreen extends React.Component {
   static navigationOptions = {
