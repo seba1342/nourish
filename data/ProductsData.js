@@ -70,19 +70,20 @@ const ProductData = [
       {
         title: 'Catching Method',
         rating: 2,
-        ratingDescription: '',
+        ratingDescription: 'Pole and line fishing is much more selective, ensuring less bycatch. Using purse seine, A vertical net ‘curtain’ is used to surround the school of fish, the bottom of which is then drawn together to enclose the fish, rather like tightening the cords of a drawstring purse. Solemare uses Pole and Line, but also is unclear weather they use Purse seine.',
         iconPath: '',
       },
       {
         title: 'Tuna Type',
         rating: 3,
-        ratingDescription: '',
+        ratingDescription: 'There are real concerns that some populations of yellowfin have been totally overfished, and in many places are still plummeting. Yellow fish is unsustainable, try skipjack instead.',
         iconPath: '',
       },
       {
         title: 'MSC Certified',
         rating: 3,
-        ratingDescription: '',
+        ratingDescription: 
+          'Wild, traceable, sustainable: the blue fish label is only applied to wild fish or seafood from fisheries that have been certified to the MSC Fisheries Standard, a science-based set of requirements for sustainable fishing. Solemare is not MSC Certified',
         iconPath: '',
       },
     ],
@@ -96,19 +97,20 @@ const ProductData = [
       {
         title: 'Catching Method',
         rating: 1,
-        ratingDescription: '',
+        ratingDescription: 'Pole and line fishing is much more selective, ensuring less bycatch. Using purse seine, A vertical net ‘curtain’ is used to surround the school of fish, the bottom of which is then drawn together to enclose the fish, rather like tightening the cords of a drawstring purse. Fish 4 Ever exclusivly uses tuna caught by Pole and Line, ensuring longevity of the species.',
         iconPath: '',
       },
       {
         title: 'Tuna Type',
         rating: 1,
-        ratingDescription: '',
+        ratingDescription: 'Relatively small, and the most abundant and widely-fished of tuna species. Skipjack tuna caught by pole and line is the most sustainable tuna fish.',
         iconPath: '',
       },
       {
         title: 'MSC Certified',
         rating: 3,
-        ratingDescription: '',
+        ratingDescription: 
+          'Wild, traceable, sustainable: the blue fish label is only applied to wild fish or seafood from fisheries that have been certified to the MSC Fisheries Standard, a science-based set of requirements for sustainable fishing. Fish4Ever is not MSC Certified',
         iconPath: '',
       },
     ],
