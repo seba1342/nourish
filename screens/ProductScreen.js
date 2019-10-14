@@ -18,7 +18,9 @@ class ProductScreen extends React.Component {
     title: 'Product',
   };
   render() {
-    const {navigate} = this.props.navigation;
+    const {navigation} = this.props;
+
+    console.log(navigation.state.params);
     return (
       <>
         <StatusBar barStyle="dark-content" />

@@ -7,6 +7,8 @@ import Button from 'apsl-react-native-button';
 
 import {Colors} from '../assets/constants.js';
 
+import ProductData from '../data/ProductsData.js';
+
 export default class HomeScreen extends Component {
   constructor(props) {
     super(props);
@@ -14,8 +16,19 @@ export default class HomeScreen extends Component {
     this.state = {
       isFocused: true,
       scannedProductBarcode: '',
+      scannedProductData: {},
     };
   }
+
+  getProductById = barcodeId => {
+    ProductData.forEach(product => {
+      if (product.id === barcodeId) {
+        this.setState({
+          scannedProductData: product,
+        });
+      }
+    });
+  };
 
   render() {
     const {loaded} = this.state;
@@ -41,9 +54,12 @@ export default class HomeScreen extends Component {
               buttonNegative: 'Cancel',
             }}
             onGoogleVisionBarcodesDetected={({barcodes}) => {
+              this.camera.pausePreview();
               this.setState({
                 scannedProductBarcode: barcodes[0].data,
+                scannedProductData: {},
               });
+              this.getProductById(this.state.scannedProductBarcode);
               this.RBSheet.open();
             }}
           />
@@ -63,26 +79,34 @@ export default class HomeScreen extends Component {
             },
           }}>
           <Text style={styles.productTitle}>
-            {this.state.scannedProductBarcode}
+            {this.state.scannedProductData.itemName
+              ? this.state.scannedProductData.itemName
+              : 'No product found matching this barcode.'}
           </Text>
           <View style={styles.buttonRow}>
             <Button
               onPress={() => {
                 this.RBSheet.close();
+                this.camera.resumePreview();
               }}
               style={[styles.button, styles.buttonSecondary]}
               textStyle={{color: Colors.light, fontSize: 18}}>
               Scan Again
             </Button>
-            <Button
-              onPress={() => {
-                this.RBSheet.close();
-                this.props.navigation.navigate('Product');
-              }}
-              style={[styles.button, styles.buttonPrimary]}
-              textStyle={{color: Colors.light, fontSize: 18}}>
-              View Item
-            </Button>
+            {this.state.scannedProductData.itemName && (
+              <Button
+                onPress={() => {
+                  this.RBSheet.close();
+                  this.props.navigation.navigate(
+                    'Product',
+                    this.state.scannedProductData,
+                  );
+                }}
+                style={[styles.button, styles.buttonPrimary]}
+                textStyle={{color: Colors.light, fontSize: 18}}>
+                View Item
+              </Button>
+            )}
           </View>
         </RBSheet>
       </View>
