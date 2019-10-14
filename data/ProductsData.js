@@ -9,11 +9,26 @@ const ProductData = [
     id: '930069800216',
     itemName: 'Nutella',
     category: 'Spreads',
-    score: {
-      palmOil: 2,
-      animalProducts: 3,
-      ausMade: 1,
-    },
+    score: [
+      {
+        title: 'Palm Oil',
+        rating: 2,
+        ratingDescription: '',
+        iconPath: '',
+      },
+      {
+        title: 'Animal Products',
+        rating: 3,
+        ratingDescription: '',
+        iconPath: '',
+      },
+      {
+        title: 'Australian Made',
+        rating: 1,
+        ratingDescription: '',
+        iconPath: '',
+      },
+    ],
   },
 
   {
@@ -34,7 +49,7 @@ const ProductData = [
         iconPath: '',
       },
       {
-        title: 'ausMade',
+        title: 'Australian Made',
         rating: 3,
         ratingDescription: '',
         iconPath: '',
@@ -47,22 +62,52 @@ const ProductData = [
     id: '00000000001',
     itemName: 'Sole Mare',
     category: 'Tuna',
-    score: {
-      catchingMethod: 2,
-      tunaType: 3,
-      mscCert: 3,
-    },
+    score: [
+      {
+        title: 'Catching Method',
+        rating: 2,
+        ratingDescription: '',
+        iconPath: '',
+      },
+      {
+        title: 'Tuna Type',
+        rating: 3,
+        ratingDescription: '',
+        iconPath: '',
+      },
+      {
+        title: 'MSC Certified',
+        rating: 3,
+        ratingDescription: '',
+        iconPath: '',
+      },
+    ],
   },
 
   {
     id: '00000000002',
     itemName: 'Fish 4 Ever',
     category: 'Tuna',
-    score: {
-      catchingMethod: 1,
-      tunaType: 1,
-      mscCert: 3,
-    },
+    score: [
+      {
+        title: 'Catching Method',
+        rating: 1,
+        ratingDescription: '',
+        iconPath: '',
+      },
+      {
+        title: 'Tuna Type',
+        rating: 1,
+        ratingDescription: '',
+        iconPath: '',
+      },
+      {
+        title: 'MSC Certified',
+        rating: 3,
+        ratingDescription: '',
+        iconPath: '',
+      },
+    ],
   },
 
   // Honey
@@ -70,44 +115,104 @@ const ProductData = [
     id: '00000000003',
     itemName: 'Pureharvest Raw Organic Honey',
     category: 'Honey',
-    score: {
-      organic: 1,
-      fairTrade: 1,
-      ausMade: 1,
-    },
+    score: [
+      {
+        title: 'Organic',
+        rating: 1,
+        ratingDescription: '',
+        iconPath: '',
+      },
+      {
+        title: 'Fair Trade',
+        rating: 1,
+        ratingDescription: '',
+        iconPath: '',
+      },
+      {
+        title: 'Australian Made',
+        rating: 1,
+        ratingDescription: '',
+        iconPath: '',
+      },
+    ],
   },
   {
     id: '930067702286',
     itemName: 'Capilano Pure Honey',
     category: 'Honey',
-    score: {
-      organic: 3,
-      fairTrade: 1,
-      ausMade: 1,
-    },
+    score: [
+      {
+        title: 'Organic',
+        rating: 3,
+        ratingDescription: '',
+        iconPath: '',
+      },
+      {
+        title: 'Fair Trade',
+        rating: 1,
+        ratingDescription: '',
+        iconPath: '',
+      },
+      {
+        title: 'Australian Made',
+        rating: 1,
+        ratingDescription: '',
+        iconPath: '',
+      },
+    ],
   },
 
   // Coffee
   {
     id: '8711000362747',
     itemName: "L'Or Espresso Pods",
-    category: 'Honey',
-    score: {
-      recyclable: 1,
-      fairTrade: 1,
-      organic: 1,
-    },
+    category: 'Coffee',
+    score: [
+      {
+        title: 'Recyclable/Compostable',
+        rating: 1,
+        ratingDescription: '',
+        iconPath: '',
+      },
+      {
+        title: 'Fair Trade',
+        rating: 1,
+        ratingDescription: '',
+        iconPath: '',
+      },
+      {
+        title: 'Organic',
+        rating: 1,
+        ratingDescription: '',
+        iconPath: '',
+      },
+    ],
   },
 
   {
     id: '8000070081000',
     itemName: 'Lavazza Pods',
-    category: 'Honey',
-    score: {
-      recyclable: 3,
-      fairTrade: 1,
-      organic: 3,
-    },
+    category: 'Coffee',
+    score: [
+      {
+        title: 'Recyclable/Compostable',
+        rating: 3,
+        ratingDescription: '',
+        iconPath: '',
+      },
+      {
+        title: 'Fair Trade',
+        rating: 1,
+        ratingDescription: '',
+        iconPath: '',
+      },
+      {
+        title: 'Organic',
+        rating: 3,
+        ratingDescription: '',
+        iconPath: '',
+      },
+    ],
   },
 ];
 
