@@ -13,7 +13,7 @@ const ProductData = [
       {
         title: 'Palm Oil',
         rating: 2,
-        ratingDescription: '',
+        ratingDescription: 'Palm oil is derived from the fruit of the oil palm tree. The palm fruit yields both palm oil and palm kernel oil. Palm oil is extracted from the pulp of the fruit and is an edible oil used in food. Palm kernel oil is extracted from the seed of the fruit and is used in the manufacture of cosmetics. Palm oil plantations are the main driver for deforestation in Indonesia and Malaysia. These two regions account for 85 percent of global production of palm oil. Nutella still uses palm oil, but from sustainable sources.',
         iconPath: '',
       },
       {
@@ -25,7 +25,7 @@ const ProductData = [
       {
         title: 'Australian Made',
         rating: 1,
-        ratingDescription: '',
+        ratingDescription: 'A good part of the production of the item has taken place here, and a significant part of the process of transforming the goods into the finished product that you are now looking at has happened in Australia. This product is made locally in Lithgow, NSW.',
         iconPath: '',
       },
     ],
@@ -39,7 +39,7 @@ const ProductData = [
       {
         title: 'Palm Oil',
         rating: 1,
-        ratingDescription: '',
+        ratingDescription: 'Palm oil is derived from the fruit of the oil palm tree. The palm fruit yields both palm oil and palm kernel oil. Palm oil is extracted from the pulp of the fruit and is an edible oil used in food. Palm kernel oil is extracted from the seed of the fruit and is used in the manufacture of cosmetics. Palm oil plantations are the main driver for deforestation in Indonesia and Malaysia. These two regions account for 85 percent of global production of palm oil. Nuttvia is free from palm oil.',
         iconPath: '',
       },
       {
@@ -51,7 +51,7 @@ const ProductData = [
       {
         title: 'Australian Made',
         rating: 3,
-        ratingDescription: '',
+        ratingDescription: 'A good part of the production of the item has taken place here, and a significant part of the process of transforming the goods into the finished product that you are now looking at has happened in Australia. This product is produced in Germany.',
         iconPath: '',
       },
     ],
@@ -131,7 +131,7 @@ const ProductData = [
       {
         title: 'Australian Made',
         rating: 1,
-        ratingDescription: '',
+        ratingDescription: 'A good part of the production of the item has taken place here, and a significant part of the process of transforming the goods into the finished product that you are now looking at has happened in Australia. This product is made locally using Australian bees.',
         iconPath: '',
       },
     ],
@@ -156,7 +156,7 @@ const ProductData = [
       {
         title: 'Australian Made',
         rating: 1,
-        ratingDescription: '',
+        ratingDescription: 'A good part of the production of the item has taken place here, and a significant part of the process of transforming the goods into the finished product that you are now looking at has happened in Australia. This product is made locally using Australian bees.',
         iconPath: '',
       },
     ],
@@ -183,7 +183,7 @@ const ProductData = [
       {
         title: 'Organic',
         rating: 1,
-        ratingDescription: '',
+        ratingDescription: 'UTZ is a certification program for sustainable farming of coffee, tea, cocoa and hazelnuts. The program is part of the Rainforest Alliance, an international non-profit organization working to create a better future for people and nature. This product is UTZ certified',
         iconPath: '',
       },
     ],
@@ -209,7 +209,7 @@ const ProductData = [
       {
         title: 'Organic',
         rating: 3,
-        ratingDescription: '',
+        ratingDescription: 'UTZ is a certification program for sustainable farming of coffee, tea, cocoa and hazelnuts. The program is part of the Rainforest Alliance, an international non-profit organization working to create a better future for people and nature. This product is not UTZ certified',
         iconPath: '',
       },
     ],
