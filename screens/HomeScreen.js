@@ -68,7 +68,7 @@ export default class HomeScreen extends Component {
           ref={ref => {
             this.RBSheet = ref;
           }}
-          height={150}
+          height={200}
           duration={250}
           animationType="fade"
           customStyles={{
@@ -97,10 +97,11 @@ export default class HomeScreen extends Component {
               <Button
                 onPress={() => {
                   this.RBSheet.close();
-                  this.props.navigation.navigate(
-                    'Product',
-                    this.state.scannedProductData,
-                  );
+                  this.state.scannedProductData.itemName &&
+                    this.props.navigation.navigate(
+                      'Product',
+                      this.state.scannedProductData,
+                    );
                 }}
                 style={[styles.button, styles.buttonPrimary]}
                 textStyle={{color: Colors.light, fontSize: 18}}>
@@ -139,7 +140,7 @@ const styles = StyleSheet.create({
   productTitle: {
     fontSize: 24,
     fontWeight: 'bold',
-    marginBottom: 24,
+    margin: 24,
     color: Colors.primary,
   },
   buttonRow: {
