@@ -1,7 +1,7 @@
 import React from 'react';
 import {View} from 'react-native';
 import {createMaterialBottomTabNavigator} from 'react-navigation-material-bottom-tabs';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
@@ -43,7 +43,7 @@ export const TabNavigator = createMaterialBottomTabNavigator(
     Recipe: {
       screen: RecipeScreen,
       navigationOptions: {
-        tabBarLabel: 'Saved',
+        tabBarLabel: 'Scanned',
         tabBarIcon: ({tintColor}) => (
           <View>
             <Icon style={[{color: tintColor}]} size={21} name={'heart'} />

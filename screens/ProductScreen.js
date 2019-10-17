@@ -64,15 +64,6 @@ const styles = StyleSheet.create({
   highlight: {
     fontWeight: '700',
   },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
-    bottom: 0,
-  },
 });
 
 export default ProductScreen;

@@ -21,6 +21,7 @@ export default class HomeScreen extends Component {
   }
 
   getProductById = barcodeId => {
+    console.log(barcodeId);
     ProductData.forEach(product => {
       if (product.id === barcodeId) {
         this.setState({
@@ -71,18 +72,24 @@ export default class HomeScreen extends Component {
           height={200}
           duration={250}
           animationType="fade"
+          closeOnDragDown
           customStyles={{
             container: {
-              justifyContent: 'center',
-              alignItems: 'center',
               backgroundColor: Colors.secondary,
             },
-          }}>
-          <Text style={styles.productTitle}>
-            {this.state.scannedProductData.itemName
-              ? this.state.scannedProductData.itemName
-              : 'No product found matching this barcode.'}
-          </Text>
+            draggableIcon: {
+              backgroundColor: Colors.primary,
+            },
+          }}
+          onClose={() => this.camera && this.camera.resumePreview()}>
+          <View style={{alignItems: 'center'}}>
+            <Text style={styles.productTitle}>
+              {this.state.scannedProductData.itemName
+                ? this.state.scannedProductData.itemName
+                : 'No product found matching this barcode.'}
+            </Text>
+          </View>
+
           <View style={styles.buttonRow}>
             <Button
               onPress={() => {

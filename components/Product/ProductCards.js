@@ -7,7 +7,7 @@ import {
   View,
   TouchableHighlight,
 } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 import Button from 'apsl-react-native-button';
 
 import {Colors} from '../../assets/constants.js';
@@ -48,7 +48,11 @@ const ProductCards = product => {
                   onPress={() => {
                     setVisible(!visible);
                   }}
-                  style={[styles.closeModal, styles.buttonSecondary]}
+                  style={[
+                    styles.closeModal,
+                    styles.buttonSecondary,
+                    {backgroundColor: score.ratingColor},
+                  ]}
                   textStyle={{
                     color: Colors.light,
                     fontSize: 18,
@@ -94,7 +98,12 @@ const ProductCards = product => {
                   size={64}
                   name={item.iconPath}
                 />
-                <Text style={{color: ratingColor, fontSize: 18}}>
+                <Text
+                  style={{
+                    color: item.ratingColor,
+                    fontSize: 18,
+                    textAlign: 'center',
+                  }}>
                   {item.title}
                 </Text>
               </View>
@@ -163,6 +172,7 @@ const styles = StyleSheet.create({
     width: '90%',
     backgroundColor: Colors.secondary,
     marginTop: 24,
+    marginBottom: 75,
   },
   productCard: {
     width: '35%',

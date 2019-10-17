@@ -6,7 +6,7 @@
 const ProductData = [
   // Spreads
   {
-    id: '930069800216',
+    id: '9300698000216',
     itemName: 'Nutella',
     category: 'Spreads',
     imagePath: require('../assets/images/nutella.jpg'),
@@ -156,7 +156,7 @@ const ProductData = [
     ],
   },
   {
-    id: '930067702286',
+    id: '9300677002286',
     itemName: 'Capilano Pure Honey',
     category: 'Honey',
     imagePath: require('../assets/images/capilano.jpg'),
