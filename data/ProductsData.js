@@ -22,7 +22,7 @@ const ProductData = [
         title: 'Animal Products',
         rating: 3,
         ratingDescription:
-          'Livestock farming has a vast environmental footprint. It contributes to land and water degradation, biodiversity loss, acid rain, coral reef degeneration and deforestation. Nutella still uses diary products in its recipe.',
+          'Livestock farming has a vast environmental footprint. It contributes to land and water degradation, biodiversity loss, acid rain, coral reef degeneration and deforestation. Nutella still uses dairy products in its recipe.',
         iconPath: 'paw',
       },
       {

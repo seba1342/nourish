@@ -15,4 +15,6 @@ import {TabNavigator} from './Router';
 // Wrap the app with the navigator in Router.js
 const App = createAppContainer(TabNavigator);
 
+console.disableYellowBox = true;
+
 export default App;

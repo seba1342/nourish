@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {AsyncStorage, StyleSheet, Text, View} from 'react-native';
 import {RNCamera} from 'react-native-camera';
 import {NavigationEvents} from 'react-navigation';
 import RBSheet from 'react-native-raw-bottom-sheet';
@@ -17,16 +17,28 @@ export default class HomeScreen extends Component {
       isFocused: true,
       scannedProductBarcode: '',
       scannedProductData: {},
+      scannedProducts: [],
     };
   }
 
   getProductById = barcodeId => {
-    console.log(barcodeId);
     ProductData.forEach(product => {
       if (product.id === barcodeId) {
         this.setState({
           scannedProductData: product,
         });
+      }
+    });
+  };
+
+  addScannedProduct = product => {
+    AsyncStorage.getItem('scannedProducts', (err, result) => {
+      if (result !== null) {
+        let newProducts = JSON.parse(result).concat([product]);
+        AsyncStorage.setItem('scannedProducts', JSON.stringify(newProducts));
+      } else {
+        console.log('Data not found, initializing storage...', err);
+        AsyncStorage.setItem('scannedProducts', JSON.stringify([product]));
       }
     });
   };
@@ -103,6 +115,8 @@ export default class HomeScreen extends Component {
             {this.state.scannedProductData.itemName && (
               <Button
                 onPress={() => {
+                  const product = this.state.scannedProductData;
+                  this.addScannedProduct(product);
                   this.RBSheet.close();
                   this.state.scannedProductData.itemName &&
                     this.props.navigation.navigate(
