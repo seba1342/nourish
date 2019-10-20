@@ -4,8 +4,10 @@ import {
   ScrollView,
   StatusBar,
   StyleSheet,
+  Text,
   View,
 } from 'react-native';
+import Button from 'apsl-react-native-button';
 
 // import {Colors} from 'react-native/Libraries/NewAppScreen';
 import {Colors} from '../assets/constants.js';
@@ -21,21 +23,35 @@ class ProductScreen extends React.Component {
     const {navigation} = this.props;
     const product = this.props.navigation.state.params;
 
-    console.log(product.imagePath);
-
     return (
       <>
         <StatusBar barStyle="dark-content" />
         <SafeAreaView>
-          <ScrollView style={styles.scrollView}>
-            <View>
-              <ProductDescription
-                productImage={product.imagePath}
-                productTitle={product.itemName}
-              />
-              <ProductCards product={navigation.state.params} />
+          {product ? (
+            <ScrollView style={styles.scrollView}>
+              <View>
+                <ProductDescription
+                  productImage={product.imagePath}
+                  productTitle={product.itemName}
+                />
+                <ProductCards product={navigation.state.params} />
+              </View>
+            </ScrollView>
+          ) : (
+            <View style={styles.container}>
+              <Text style={styles.sectionTitle}>
+                Please start by scanning a product!
+              </Text>
+              <Button
+                onPress={() => {
+                  this.props.navigation.navigate('Scan');
+                }}
+                style={[styles.button, styles.buttonPrimary]}
+                textStyle={{color: Colors.light, fontSize: 18}}>
+                Scan
+              </Button>
             </View>
-          </ScrollView>
+          )}
         </SafeAreaView>
       </>
     );
@@ -43,6 +59,15 @@ class ProductScreen extends React.Component {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    width: '100%',
+    height: '100%',
+    backgroundColor: Colors.secondary,
+    flexDirection: 'column',
+    // flexWrap: 'wrap',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   scrollView: {
     backgroundColor: Colors.secondary,
   },
@@ -54,6 +79,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: '600',
     color: Colors.primary,
+    flexShrink: 1,
   },
   sectionDescription: {
     marginTop: 8,
@@ -63,6 +89,18 @@ const styles = StyleSheet.create({
   },
   highlight: {
     fontWeight: '700',
+  },
+  button: {
+    width: 124,
+    height: 48,
+    borderWidth: 0,
+    borderRadius: 24,
+    margin: 48,
+    alignSelf: 'center',
+  },
+  buttonPrimary: {
+    backgroundColor: Colors.primary,
+    color: Colors.light,
   },
 });
 

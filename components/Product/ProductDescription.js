@@ -11,7 +11,7 @@ const ProductDescription = ({
 }) => {
   return (
     <View>
-      <Image style={[styles.productImage]} source={productImage} />
+      <Image style={styles.productImage} source={productImage} />
       <View style={styles.sectionContainer}>
         <Text style={styles.sectionTitle}>{productTitle}</Text>
       </View>
@@ -37,5 +37,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: Colors.primary,
     marginVertical: 24,
+    fontFamily: 'Quicksand-Bold',
   },
 });

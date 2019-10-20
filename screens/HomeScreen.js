@@ -10,6 +10,10 @@ import {Colors} from '../assets/constants.js';
 import ProductData from '../data/ProductsData.js';
 
 export default class HomeScreen extends Component {
+  static navigationOptions = {
+    title: 'Scan',
+  };
+
   constructor(props) {
     super(props);
 
