@@ -31,7 +31,7 @@ const ProductCards = product => {
           <View style={styles.productModalInner}>
             <View style={styles.modalTitleContainer}>
               <Icon
-                style={[{color: score.ratingColor}]}
+                style={[styles.modalIcon, {color: score.ratingColor}]}
                 size={64}
                 name={score.iconPath}
               />
@@ -127,7 +127,6 @@ const styles = StyleSheet.create({
     width: '60%',
     paddingVertical: 20,
     alignSelf: 'center',
-    alignContent: 'center',
     alignItems: 'center',
     justifyContent: 'flex-end',
   },
@@ -135,8 +134,16 @@ const styles = StyleSheet.create({
     fontSize: 28,
     fontWeight: 'bold',
     color: Colors.primary,
-    marginLeft: 15,
     alignSelf: 'center',
+    flexShrink: 1,
+    flex: 1,
+    marginLeft: -42,
+  },
+  modalIcon: {
+    alignSelf: 'center',
+    flexShrink: 1,
+    flex: 1,
+    textAlign: 'center',
   },
   modalTitleContainer: {
     flexDirection: 'row',
@@ -147,6 +154,7 @@ const styles = StyleSheet.create({
     color: Colors.primary,
     paddingHorizontal: 20,
     textAlign: 'center',
+    lineHeight: 24,
   },
   productModal: {
     alignSelf: 'center',

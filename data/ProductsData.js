@@ -136,7 +136,8 @@ const ProductData = [
       {
         title: 'Organic',
         rating: 1,
-        ratingDescription: '',
+        ratingDescription:
+          'This honey is harvested away from industrial areas, sanitary landfills or garbage dumps.',
         iconPath: 'leaf',
       },
       {
@@ -164,7 +165,8 @@ const ProductData = [
       {
         title: 'Organic',
         rating: 3,
-        ratingDescription: '',
+        ratingDescription:
+          'This honey is not harvested away from industrial areas, sanitary landfills or garbage dumps.',
         iconPath: 'leaf',
       },
       {

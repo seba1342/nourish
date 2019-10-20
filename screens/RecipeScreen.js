@@ -54,7 +54,12 @@ class RecipeScreen extends React.Component {
       );
     }
     return (
-      <SafeAreaView>
+      <SafeAreaView
+        style={{
+          backgroundColor: Colors.secondary,
+          height: '100%',
+          width: '100%',
+        }}>
         <ScrollView style={styles.scrollView}>
           <View style={styles.sectionContainer}>
             <Text style={styles.sectionTitle}>Scanned products</Text>
