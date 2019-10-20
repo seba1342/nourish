@@ -99,6 +99,7 @@ export default class HomeScreen extends Component {
           customStyles={{
             container: {
               backgroundColor: Colors.secondary,
+              borderRadius: 24,
             },
             draggableIcon: {
               backgroundColor: Colors.primary,
@@ -125,7 +126,12 @@ export default class HomeScreen extends Component {
                 this.camera.resumePreview();
               }}
               style={[styles.button, styles.buttonSecondary]}
-              textStyle={{color: Colors.light, fontSize: 18}}>
+              textStyle={{
+                color: Colors.light,
+                fontSize: 18,
+                lineHeight: 20,
+                fontFamily: 'Quicksand-Bold',
+              }}>
               Scan Again
             </Button>
             {this.state.scannedProductData.itemName && (
@@ -141,7 +147,12 @@ export default class HomeScreen extends Component {
                     );
                 }}
                 style={[styles.button, styles.buttonPrimary]}
-                textStyle={{color: Colors.light, fontSize: 18}}>
+                textStyle={{
+                  color: Colors.light,
+                  fontSize: 18,
+                  lineHeight: 20,
+                  fontFamily: 'Quicksand-Bold',
+                }}>
                 View Item
               </Button>
             )}
@@ -176,7 +187,7 @@ const styles = StyleSheet.create({
   },
   productTitle: {
     fontSize: 24,
-    fontWeight: 'bold',
+    fontFamily: 'Merriweather-Bold',
     margin: 24,
     color: Colors.primary,
     textAlign: 'center',

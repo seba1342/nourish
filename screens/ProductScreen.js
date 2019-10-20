@@ -34,6 +34,26 @@ class ProductScreen extends React.Component {
                   productImage={product.imagePath}
                   productTitle={product.itemName}
                 />
+                <Text
+                  style={{
+                    marginHorizontal: 24,
+                    color: Colors.primary,
+                    fontFamily: 'Merriweather-Bold',
+                    fontSize: 20,
+                    lineHeight: 30,
+                  }}>
+                  Sustainability Rating
+                </Text>
+                <Text
+                  style={{
+                    marginHorizontal: 24,
+                    color: Colors.primary,
+                    fontFamily: 'Merriweather-Regular',
+                    fontSize: 16,
+                    lineHeight: 24,
+                  }}>
+                  Understand how sustainable this product really is:
+                </Text>
                 <ProductCards product={navigation.state.params} />
               </View>
             </ScrollView>
@@ -44,10 +64,15 @@ class ProductScreen extends React.Component {
               </Text>
               <Button
                 onPress={() => {
-                  this.props.navigation.navigate('Recipe');
+                  this.props.navigation.navigate('Home');
                 }}
                 style={[styles.button, styles.buttonPrimary]}
-                textStyle={{color: Colors.light, fontSize: 18}}>
+                textStyle={{
+                  color: Colors.light,
+                  fontSize: 18,
+                  lineHeight: 20,
+                  fontFamily: 'Quicksand-Bold',
+                }}>
                 Scan
               </Button>
             </View>
@@ -64,7 +89,6 @@ const styles = StyleSheet.create({
     height: '100%',
     backgroundColor: Colors.secondary,
     flexDirection: 'column',
-    // flexWrap: 'wrap',
     alignItems: 'center',
     justifyContent: 'center',
   },

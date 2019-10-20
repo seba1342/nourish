@@ -4,11 +4,7 @@ import {Image, StyleSheet, Text, View} from 'react-native';
 // import {Colors} from 'react-native/Libraries/NewAppScreen';
 import {Colors} from '../../assets/constants.js';
 
-const ProductDescription = ({
-  productImage,
-  productTitle,
-  productDescription,
-}) => {
+const ProductDescription = ({productImage, productTitle}) => {
   return (
     <View>
       <Image style={styles.productImage} source={productImage} />
@@ -36,6 +32,6 @@ const styles = StyleSheet.create({
     fontSize: 32,
     color: Colors.primary,
     marginVertical: 24,
-    fontFamily: 'Quicksand-Bold',
+    fontFamily: 'Merriweather-Bold',
   },
 });

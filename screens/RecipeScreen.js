@@ -62,7 +62,10 @@ class RecipeScreen extends React.Component {
         }}>
         <ScrollView style={styles.scrollView}>
           <View style={styles.sectionContainer}>
-            <Text style={styles.sectionTitle}>Scanned products</Text>
+            <Text style={styles.sectionTitle}>
+              Your <Text style={{fontFamily: 'Quicksand-Bold'}}>scanned</Text>{' '}
+              products
+            </Text>
           </View>
           <View>
             {this.state.scannedProducts ? (
@@ -110,6 +113,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     paddingVertical: 10,
+    marginVertical: 10,
     backgroundColor: Colors.secondary,
     height: 100,
     alignItems: 'center',
@@ -117,18 +121,20 @@ const styles = StyleSheet.create({
   products: {
     padding: 10,
     marginLeft: 10,
-    fontSize: 20,
-    fontWeight: '700',
+    fontSize: 24,
+    fontFamily: 'Merriweather-Bold',
     color: Colors.primary,
     flex: 1,
     flexShrink: 1,
   },
   productImage: {
-    width: '20%',
+    width: 100,
+    height: 100,
     margin: 0,
     padding: 0,
-    height: '100%',
-    resizeMode: 'contain',
+    marginLeft: 24,
+    resizeMode: 'cover',
+    borderRadius: 10,
   },
   sectionContainer: {
     paddingHorizontal: 18,
@@ -136,7 +142,7 @@ const styles = StyleSheet.create({
   },
   sectionTitle: {
     fontSize: 32,
-    fontWeight: 'bold',
+    fontFamily: 'Quicksand-Regular',
     color: Colors.primary,
     marginVertical: 18,
     paddingBottom: 10,

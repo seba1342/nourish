@@ -56,7 +56,8 @@ const ProductCards = product => {
                   textStyle={{
                     color: Colors.light,
                     fontSize: 18,
-                    fontWeight: 'bold',
+                    lineHeight: 20,
+                    fontFamily: 'Quicksand-Bold',
                   }}>
                   Close
                 </Button>
@@ -103,6 +104,7 @@ const ProductCards = product => {
                     color: item.ratingColor,
                     fontSize: 18,
                     textAlign: 'center',
+                    fontFamily: 'Merriweather-Bold',
                   }}>
                   {item.title}
                 </Text>
@@ -132,7 +134,7 @@ const styles = StyleSheet.create({
   },
   modalTitle: {
     fontSize: 28,
-    fontWeight: 'bold',
+    fontFamily: 'Merriweather-Bold',
     color: Colors.primary,
     alignSelf: 'center',
     flexShrink: 1,
@@ -155,6 +157,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     textAlign: 'center',
     lineHeight: 24,
+    fontFamily: 'Merriweather-Regular',
   },
   productModal: {
     alignSelf: 'center',
@@ -167,7 +170,7 @@ const styles = StyleSheet.create({
   productModalInner: {
     width: '90%',
     height: '50%',
-    backgroundColor: '#FFFFFF',
+    backgroundColor: Colors.light,
     borderRadius: 40,
     justifyContent: 'space-evenly',
     alignItems: 'center',
@@ -178,14 +181,12 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     justifyContent: 'space-evenly',
     width: '90%',
-    backgroundColor: Colors.secondary,
     marginTop: 24,
     marginBottom: 75,
   },
   productCard: {
     width: '35%',
     height: 170,
-    backgroundColor: Colors.light,
     borderRadius: 10,
     marginVertical: 12,
     shadowColor: Colors.dark,
