@@ -31,14 +31,21 @@ export default class HomeScreen extends Component {
     });
   };
 
-  addScannedProduct = product => {
+  addScannedProduct = newProduct => {
     AsyncStorage.getItem('scannedProducts', (err, result) => {
       if (result !== null) {
-        let newProducts = JSON.parse(result).concat([product]);
-        AsyncStorage.setItem('scannedProducts', JSON.stringify(newProducts));
+        const products = JSON.parse(result);
+
+        if (!products.some(product => product.id === newProduct.id)) {
+          console.log(`${newProduct.id} not scanned, adding it now.`);
+          let newProducts = JSON.parse(result).concat([newProduct]);
+          AsyncStorage.setItem('scannedProducts', JSON.stringify(newProducts));
+        } else {
+          console.log(`${newProduct.id} already scanned.`);
+        }
       } else {
         console.log('Data not found, initializing storage...', err);
-        AsyncStorage.setItem('scannedProducts', JSON.stringify([product]));
+        AsyncStorage.setItem('scannedProducts', JSON.stringify([newProduct]));
       }
     });
   };
@@ -94,7 +101,12 @@ export default class HomeScreen extends Component {
             },
           }}
           onClose={() => this.camera && this.camera.resumePreview()}>
-          <View style={{alignItems: 'center'}}>
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}>
             <Text style={styles.productTitle}>
               {this.state.scannedProductData.itemName
                 ? this.state.scannedProductData.itemName
@@ -163,6 +175,9 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     margin: 24,
     color: Colors.primary,
+    textAlign: 'center',
+    flex: 1,
+    flexShrink: 1,
   },
   buttonRow: {
     width: '100%',

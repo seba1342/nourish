@@ -11,10 +11,7 @@ const ProductDescription = ({
 }) => {
   return (
     <View>
-      <Image
-        style={[styles.productImage, {width: '100%', resizeMode: 'contain'}]}
-        source={productImage}
-      />
+      <Image style={[styles.productImage]} source={productImage} />
       <View style={styles.sectionContainer}>
         <Text style={styles.sectionTitle}>{productTitle}</Text>
       </View>
@@ -31,6 +28,7 @@ const styles = StyleSheet.create({
   productImage: {
     backgroundColor: Colors.light,
     width: '100%',
+    height: 330,
     top: 0,
     left: 0,
   },
