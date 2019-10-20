@@ -15,7 +15,7 @@ const ProductData = [
         title: 'Palm Oil',
         rating: 2,
         ratingDescription:
-          'Palm oil is derived from the fruit of the oil palm tree. The palm fruit yields both palm oil and palm kernel oil. Palm oil is extracted from the pulp of the fruit and is an edible oil used in food. Palm kernel oil is extracted from the seed of the fruit and is used in the manufacture of cosmetics. Palm oil plantations are the main driver for deforestation in Indonesia and Malaysia. These two regions account for 85 percent of global production of palm oil. Nutella still uses palm oil, but from sustainable sources.',
+          'Palm oil is an edible oil derived from the fruit of the oil palm tree. Palm oil plantations are the main driver for deforestation in Indonesia and Malaysia. These two regions account for 85 percent of global palm oil production. Nutella still uses palm oil, but from sustainable sources.',
         iconPath: 'pagelines',
       },
       {
@@ -45,7 +45,7 @@ const ProductData = [
         title: 'Palm Oil',
         rating: 1,
         ratingDescription:
-          'Palm oil is derived from the fruit of the oil palm tree. The palm fruit yields both palm oil and palm kernel oil. Palm oil is extracted from the pulp of the fruit and is an edible oil used in food. Palm kernel oil is extracted from the seed of the fruit and is used in the manufacture of cosmetics. Palm oil plantations are the main driver for deforestation in Indonesia and Malaysia. These two regions account for 85 percent of global production of palm oil. Nuttvia is free from palm oil.',
+          'Palm oil is an edible oil derived from the fruit of the oil palm tree. Palm oil plantations are the main driver for deforestation in Indonesia and Malaysia. These two regions account for 85 percent of global palm oil production. Nuttvia is free from palm oil.',
         iconPath: 'pagelines',
       },
       {
