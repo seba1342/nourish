@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     flexShrink: 1,
     flex: 1,
-    marginLeft: -42,
+    marginLeft: -30,
   },
   modalIcon: {
     alignSelf: 'center',

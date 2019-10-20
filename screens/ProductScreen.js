@@ -44,7 +44,7 @@ class ProductScreen extends React.Component {
               </Text>
               <Button
                 onPress={() => {
-                  this.props.navigation.navigate('Scan');
+                  this.props.navigation.navigate('Recipe');
                 }}
                 style={[styles.button, styles.buttonPrimary]}
                 textStyle={{color: Colors.light, fontSize: 18}}>
