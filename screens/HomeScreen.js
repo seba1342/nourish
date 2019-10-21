@@ -78,6 +78,7 @@ export default class HomeScreen extends Component {
               buttonNegative: 'Cancel',
             }}
             onGoogleVisionBarcodesDetected={({barcodes}) => {
+              console.log(barcodes[0].data);
               this.camera.pausePreview();
               this.setState({
                 scannedProductBarcode: barcodes[0].data,

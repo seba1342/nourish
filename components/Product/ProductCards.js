@@ -105,6 +105,7 @@ const ProductCards = product => {
                     fontSize: 18,
                     textAlign: 'center',
                     fontFamily: 'Merriweather-Bold',
+                    width: '80%',
                   }}>
                   {item.title}
                 </Text>
@@ -139,7 +140,6 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     flexShrink: 1,
     flex: 1,
-    marginLeft: -30,
   },
   modalIcon: {
     alignSelf: 'center',

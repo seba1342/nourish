@@ -67,7 +67,7 @@ const ProductData = [
 
   // Tuna
   {
-    id: '00000000001',
+    id: '9310175218065',
     itemName: 'Sole Mare',
     category: 'Tuna',
     imagePath: require('../assets/images/solemare.png'),
@@ -97,10 +97,10 @@ const ProductData = [
   },
 
   {
-    id: '00000000002',
-    itemName: 'Fish 4 Ever',
+    id: '9310768110318',
+    itemName: 'Safcol',
     category: 'Tuna',
-    imagePath: require('../assets/images/fish4ever.jpg'),
+    imagePath: require('../assets/images/safcol.jpg'),
     score: [
       {
         title: 'Catching Method',
@@ -157,7 +157,7 @@ const ProductData = [
     ],
   },
   {
-    id: '9300677002286',
+    id: '9300677006536',
     itemName: 'Capilano Pure Honey',
     category: 'Honey',
     imagePath: require('../assets/images/capilano.jpg'),
@@ -188,7 +188,7 @@ const ProductData = [
 
   // Coffee
   {
-    id: '8711000362747',
+    id: '8711000362631',
     itemName: "L'Or Espresso Pods",
     category: 'Coffee',
     imagePath: require('../assets/images/lor.jpg'),
@@ -218,7 +218,7 @@ const ProductData = [
   },
 
   {
-    id: '8000070081000',
+    id: '8000070022836',
     itemName: 'Lavazza Pods',
     category: 'Coffee',
     imagePath: require('../assets/images/lavazza-coffee-pods.jpg'),
